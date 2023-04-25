@@ -13,12 +13,12 @@ class NotificationManager:
             msg = f"LOW PRICE ALERT! Only £{details['Price']} from {details['Departure City Name']}-{details['fly from']} to {details['Arrival City Name']}-{details['fly to']}, from {details['outbound date']} to {details['inbound date']} Flight has 1 stopover from{details['Departure City Name']} to {details['via_city']}"
         else:
             msg = f"LOW PRICE ALERT! Only £{details['Price']} from {details['Departure City Name']}-{details['fly from']} to {details['Arrival City Name']}-{details['fly to']}, from {details['outbound date']} to {details['inbound date']}"
-        account_sid = "ACd4778c4af290fa493c861a74b959af0d"
-        auth_token = "0b890599cf183aaf88f3e9a85f80bed5"
+        account_sid = "AC7e8f4996c90159f48a37bede6a558f9c"
+        auth_token = "620e347c3cdaed69cf07a3880bec2c333b"
         client = Client(account_sid, auth_token)
         message = client.messages.create(
             body=msg,
-            from_='+17653022164',
+            from_='+16074008358',
             to='+918685851664'
         )
         print(message.sid)
